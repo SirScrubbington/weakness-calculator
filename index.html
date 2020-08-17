@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title> Pokemon Type Matchup Tool </title>
+		
+		<!-- HTML Character Set -->
+		<meta charset="UTF-8">
+		
+		<!-- Set HTML Web Page Icon -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		
+		<!-- Bootstrap Javascript Source Content -->
+		<script type='script/javascript' src='bootstrap/bootstrap.min.js'></script>
+		
+		<!-- Bootstrap CSS Source Content -->
+		<link rel='stylesheet' href='bootstrap/bootstrap.min.css'>
+	</head>
+	<body>
+		<form> 
+			<div class='form-group'>
+				<label for='search'> Search </label>
+				<input id='search' class='form-control' name='search' onchange='searchspecies(false)' placeholder='Search here...'>
+				<button type='button' id='submit' class='btn btn-outline-primary' onclick='searchspecies(true)'> Search! </button>
+			</div>
+			<label for='weak4x'> 4x Weakness </label>
+			<div id='weak4x'>
+				<!-- The 4x Type Weak Sprites will go here -->
+			</div>
+			<label for='weak2x'> 2x Weakness </label>
+			<div id='weak2x'>
+				<!-- The 2x Type Weak Sprites will go here -->
+			</div>
+			<label for='neutral'> Neutral </label>
+			<div id='neutral'>
+				<!-- The Neutral Type Sprites will go here -->
+			</div>
+			<label for='resist2x'> 2x Resistance </label>
+			<div id='resist2x'>
+				<!-- The 2x Type Resist Sprites will go here -->
+			</div>
+			<label for='resist4x'> 4x Resistance </label>
+			<div id='resist4x'>
+				<!-- The 4x Type Resist Sprites will go here -->
+			</div>
+			<label for='immune'> Immunity </label>
+			<div id='immune'>
+				<!-- The Type Immune Sprites will go here -->
+			</div>
+		</form>
+		<!-- Code goes here - loads last -->
+		<div>
+			<!-- Pokedex Data Source File - From https://www.pokemonshowdown.com -->
+			<script type='text/javascript' src='data/dex.js'> </script>
+		
+			<!-- Pokemon Types Data Source File - From https://www.pokemonshowdown.com -->
+			<script type='text/javascript' src='data/typ.js'> </script>
+		
+			<!-- Main code file for this program -->
+			<script type='text/javascript' src='index.js'></script>
+			
+			<script type='text/javascript'>
+				// Execute a function when the user releases a key on the keyboard
+				document.getElementById('search').addEventListener("keydown", function(event) {
+				  // Number 13 is the "Enter" key on the keyboard
+				  if (event.keyCode === 13) {
+					// Cancel the default action, if needed
+					event.preventDefault();
+					// Trigger the button element with a click
+					document.getElementById('submit').click();
+				  }
+				});
+			</script>
+		</div>
+	</body>
+</html>
