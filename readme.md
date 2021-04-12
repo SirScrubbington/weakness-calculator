@@ -8,6 +8,11 @@ A program for showing weaknesses and resistances of a given pokemon.
 This application has been archived. It has been superceded by the 
 [coverage-calculator](https://github.com/damon-murdoch/coverage-calculator).
 
+## Live Application
+The live application can be accessed [here](https://damon-murdoch.github.io/weakness-calculator/).
+
+Link: https://damon-murdoch.github.io/weakness-calculator/
+
 ## Future Changes
 A list of future planned fixes / improvements are listed below.
 
